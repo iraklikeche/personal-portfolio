@@ -9,3 +9,12 @@ import Navbar from "./components/Navbar.vue";
     <Banner />
   </main>
 </template>
+
+<style scoped>
+main {
+  background-image: url("./assets/img/banner-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>

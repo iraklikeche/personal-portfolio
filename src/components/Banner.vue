@@ -1,21 +1,30 @@
 <template>
-  <section class="container px-20 py-10">
+  <section
+    class="banner container px-20 py-32 pb-24 bg-[url('../assets/img/banner-bg.png')]"
+  >
     <div class="flex">
-      <div>
-        <h2 class="text-2xl font-medium text-center mb-4 border">
+      <div class="flex items-center flex-col w-3/4">
+        <h2
+          class="welcome text-2xl font-bold text-center mb-4 tracking-wider py-3 px-4 inline-block"
+        >
           Welcome To My Portfolio
         </h2>
 
-        <h1 class="text-6xl font-bold">
-          Hi I'm <span class="text-red-500">{{ text }}</span>
+        <h1 class="text-6xl font-bold tracking-wider mb-5 block">
+          Hi I'm <br />
+          <span class="text-red-500">{{ text }}</span>
         </h1>
-        <p class="text-xl">
+
+        <p class="text-[#b8b8b8] text-lg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
           temporibus possimus sequi quas quisquam vitae rem aperiam, soluta,
           praesentium et sed ipsa distinctio ab ad a officiis totam asperiores
-          tempore.
+          tempore, praesentium et sed ipsa distinctio ab ad a officiis totam
+          asperiores
         </p>
-        <button>Let's connect</button>
+        <button class="text-white font-bold text-xl mt-14 tracking-wider">
+          Let's Connect
+        </button>
       </div>
       <div>
         <img :src="headerImg" alt="Header Image" />
@@ -70,3 +79,32 @@ onMounted(() => {
   };
 });
 </script>
+
+<style scoped>
+.welcome {
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+img {
+  animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+</style>
