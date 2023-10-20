@@ -10,6 +10,7 @@
 
 <script setup>
 const props = defineProps({
+  index: Number,
   imgUrl: String,
   title: String,
   description: String,
