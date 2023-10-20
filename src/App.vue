@@ -2,6 +2,7 @@
 import Banner from "./components/Banner.vue";
 import Navbar from "./components/Navbar.vue";
 import Skills from "./components/Skills.vue";
+import Projects from "./components/Projects.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Skills from "./components/Skills.vue";
     <!-- <Navbar /> -->
     <Banner />
     <Skills />
+    <Projects />
   </main>
 </template>
 
