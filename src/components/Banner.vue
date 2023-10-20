@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="banner container px-20 py-32 pb-24 bg-[url('../assets/img/banner-bg.png')]"
-  >
+  <section class="banner container px-20 py-32 pb-24">
     <div class="flex">
       <div class="flex items-center flex-col w-3/4">
         <h2
@@ -81,6 +79,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.banner {
+  /* background-image: url("../assets/img/banner-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
 .welcome {
   background: linear-gradient(
     90.21deg,

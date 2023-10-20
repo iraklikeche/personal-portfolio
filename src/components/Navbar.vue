@@ -32,11 +32,7 @@
         <a href="#"><img :src="navIcon3" alt="Instagram" /></a>
       </div>
 
-      <button
-        class="btn font-bold text-white border py-5 px-9 ml-5 relative bg-transparent transition-[0.3] ease-in-out"
-      >
-        Let's Connect
-      </button>
+      <button class="connect">Let's Connect</button>
     </div>
   </nav>
 </template>
@@ -84,24 +80,40 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
     hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
-.btn::before {
+.connect {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.connect::before {
   content: "";
-  width: 0%;
+  width: 100%;
   height: 100%;
   position: absolute;
   background-color: #fff;
   left: 0;
   top: 0;
-  z-index: -1;
+  transform: scale(0);
+  z-index: 9999;
   transition: 0.3s ease-in-out;
 }
-.btn:hover {
+.connect:hover {
   color: #121212;
 }
-.btn:hover::before {
+.connect:hover::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: -1;
+  transform: scale(1);
 }
 </style>
