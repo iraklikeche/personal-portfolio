@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center px-20 py-10 text-white">
+  <nav class="flex justify-between items-center text-white">
     <div class="text-5xl">
       <img :src="logo" alt="LOGO" />
     </div>
@@ -89,7 +89,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
   margin-left: 18px;
   position: relative;
   background-color: transparent;
-  transition: 0.3s ease-in-out;
+  transition: 0.35s ease-in-out;
   z-index: 999;
 }
 
@@ -103,7 +103,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
   top: 0;
   transform: scale(0);
   z-index: 9999;
-  transition: 0.3s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 .connect:hover {
   color: #121212;

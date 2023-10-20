@@ -1,15 +1,16 @@
 <template>
-  <section class="banner container px-20 py-32 pb-24">
-    <div class="flex">
-      <div class="flex items-center flex-col w-3/4">
+  <section class="banner container px-20 py-10 pb-24 h-screen">
+    <Navbar />
+    <div class="flex items-center py-28">
+      <div class="w-3/4">
         <h2
-          class="welcome text-2xl font-bold text-center mb-4 tracking-wider py-3 px-4 inline-block"
+          class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-4 inline-block"
         >
           Welcome To My Portfolio
         </h2>
 
         <h1 class="text-6xl font-bold tracking-wider mb-5 block">
-          Hi I'm <br />
+          Hi I'm
           <span class="text-red-500">{{ text }}</span>
         </h1>
 
@@ -18,7 +19,7 @@
           temporibus possimus sequi quas quisquam vitae rem aperiam, soluta,
           praesentium et sed ipsa distinctio ab ad a officiis totam asperiores
           tempore, praesentium et sed ipsa distinctio ab ad a officiis totam
-          asperiores
+          asperiores.
         </p>
         <button class="text-white font-bold text-xl mt-14 tracking-wider">
           Let's Connect
@@ -34,6 +35,7 @@
 <script setup>
 import headerImg from "../assets/img/header-img.svg";
 import { ref, onMounted } from "vue";
+import Navbar from "./Navbar.vue";
 
 const toRotate = ["Bla1.", "Blah2.", "Blah3."];
 const loopNum = ref(0);
@@ -80,10 +82,10 @@ onMounted(() => {
 
 <style scoped>
 .banner {
-  /* background-image: url("../assets/img/banner-bg.png");
+  background-image: url("../assets/img/banner-bg.png");
   background-position: top center;
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 .welcome {
   background: linear-gradient(
