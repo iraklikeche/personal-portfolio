@@ -10,7 +10,7 @@
       </p>
       <div>
         <button
-          class="text-xl font-bold border px-32 py-5 rounded-l-full bg-[#252525] transition-all"
+          class="text-xl font-bold border px-32 py-5 rounded-l-full bg-[#252525]"
           @click="changeTab(0)"
           :class="{
             'bg-gradient-to-r': activeTab === 0,
