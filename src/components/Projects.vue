@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 bg-black">
+  <section class="py-12 bg-black" id="projects">
     <div class="flex flex-col items-center justify-center gap-8">
       <h2 class="text-5xl font-bold">Projects</h2>
       <p class="opacity-50 text-xl leading-8 font-book text-center w-3/4">
@@ -37,7 +37,7 @@
         </button>
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-10 px-20 mt-12">
+    <div class="grid grid-cols-3 gap-10 px-24 mt-12">
       <div
         v-if="activeTab === 0"
         v-for="(project, index) in projects"

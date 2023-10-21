@@ -1,5 +1,5 @@
 <template>
-  <section class="contact py-24 px-20">
+  <section class="contact py-24 px-24" id="connect-me">
     <div class="grid grid-cols-2 gap-12">
       <div>
         <img :src="contactImg" />

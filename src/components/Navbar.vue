@@ -1,22 +1,25 @@
 <template>
-  <nav class="flex justify-between items-center text-white">
+  <nav
+    class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-24 z-50"
+    :class="{ 'bg-[#121212] py-2': isSticky }"
+  >
     <div class="text-5xl">
       <img :src="logo" alt="LOGO" />
     </div>
     <div class="flex items-center">
       <div class="flex gap-16 mr-12 text-lg">
         <a
-          href="#"
+          href="#home"
           class="opacity-50 hover:opacity-100 transition-opacity duration-200"
           >Home</a
         >
         <a
-          href="#"
+          href="#skills"
           class="opacity-50 hover:opacity-100 transition-opacity duration-200"
           >Skills</a
         >
         <a
-          href="#"
+          href="#projects"
           class="opacity-50 hover:opacity-100 transition-opacity duration-200"
           >Projects</a
         >
@@ -32,7 +35,7 @@
         <a href="#"><img :src="navIcon3" alt="Instagram" /></a>
       </div>
 
-      <button class="connect">Let's Connect</button>
+      <a href="#connect-me" class="connect"> Let's Connect </a>
     </div>
   </nav>
 </template>
@@ -42,10 +45,28 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isSticky = ref(false);
+
+// Function to handle scroll event
+function handleScroll() {
+  isSticky.value = window.scrollY > 100;
+}
+
+// Add scroll event listener when the component is mounted
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+// Remove scroll event listener when the component is unmounted
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
-
 .connect {
   font-weight: 700;
   color: #fff;

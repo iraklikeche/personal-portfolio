@@ -1,6 +1,6 @@
 <template>
-  <section class="banner container px-20 py-10 pb-24 h-screen">
-    <Navbar />
+  <section class="banner container px-24 py-10 pb-24 h-screen" id="home">
+    <!-- <Navbar /> -->
     <div class="flex items-center py-28">
       <div class="w-3/4">
         <h2

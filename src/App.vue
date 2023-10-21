@@ -9,7 +9,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <main>
-    <!-- <Navbar /> -->
+    <Navbar />
     <Banner />
     <Skills />
     <Projects />

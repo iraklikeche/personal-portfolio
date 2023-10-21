@@ -1,5 +1,5 @@
 <template>
-  <section class="rounded-xl">
+  <section class="rounded-xl" id="skills">
     <div class="flex flex-col items-center justify-center py-16 pb-0">
       <h2 class="text-5xl font-bold mb-6">Skills</h2>
       <p class="opacity-50 text-xl text-center w-3/4">
