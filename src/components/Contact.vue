@@ -30,6 +30,7 @@
               type="text"
               placeholder="Last Name"
               name="user_lastName"
+              required
               class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
             />
           </div>
@@ -45,6 +46,7 @@
               type="tel"
               placeholder="Phone Number"
               name="user_phone"
+              required
               class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
             />
           </div>
