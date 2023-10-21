@@ -1,21 +1,11 @@
 <template>
-  <section class="contact py-24 px-24" id="connect-me">
+  <section class="contact py-24 px-20" id="connect-me">
     <div class="grid grid-cols-2 gap-12">
       <div>
         <img :src="contactImg" />
       </div>
       <div>
         <h2 class="mb-12 text-5xl font-bold">Get In Touch</h2>
-
-        <!-- <form ref="form" @submit.prevent="sendEmail">
-
-          <input type="text" name="user_name" />
- 
-          <input type="email" name="user_email" />
- 
-          <textarea name="message"></textarea>
-          <input type="submit" value="Send" />
-        </form> -->
 
         <form ref="formData" @submit.prevent="sendEmail">
           <div class="flex gap-2 mb-2">

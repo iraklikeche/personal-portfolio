@@ -1,15 +1,15 @@
 <template>
   <nav
-    class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-24 z-50"
+    class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-20 z-50"
     :class="{ 'bg-[#121212] py-2': isSticky }"
   >
     <div class="text-5xl">
       <img :src="logo" alt="LOGO" />
     </div>
     <div class="flex items-center">
-      <div class="flex gap-16 mr-12 text-lg">
+      <div class="flex gap-8 xl:gap-16 mr-4 xl:mr-12 text-lg">
         <a
-          href="#home"
+          href="/"
           class="opacity-50 hover:opacity-100 transition-opacity duration-200"
           >Home</a
         >
@@ -25,7 +25,7 @@
         >
       </div>
 
-      <div class="social-icon flex gap-2 mr-8">
+      <div class="social-icon flex gap-2 mr-2 xl:mr-8">
         <a
           href="#"
           class="bg-[rgba(217, 217, 217, 0.1)] inline-flex rounded-full mr-1 items-center justify-center border border-[rgba(255, 255, 255, 0.5)]"

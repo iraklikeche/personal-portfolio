@@ -1,7 +1,7 @@
 <template>
-  <section class="banner container px-24 py-10 pb-24 h-screen" id="home">
+  <section class="banner px-20 py-10 pb-24 h-screen" id="home">
     <!-- <Navbar /> -->
-    <div class="flex items-center py-28">
+    <div class="flex items-center gap-24 py-28">
       <div class="w-3/4">
         <h2
           class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-4 inline-block"
@@ -21,9 +21,12 @@
           tempore, praesentium et sed ipsa distinctio ab ad a officiis totam
           asperiores.
         </p>
-        <button class="text-white font-bold text-xl mt-14 tracking-wider">
+        <a
+          href="#connect-me"
+          class="text-white font-bold text-xl mt-10 tracking-wider inline-block hover:text-black transition duration-300"
+        >
           Let's Connect
-        </button>
+        </a>
       </div>
       <div>
         <img :src="headerImg" alt="Header Image" />

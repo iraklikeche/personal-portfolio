@@ -1,9 +1,9 @@
 <template>
-  <footer class="flex justify-between items-center py-16 px-24">
+  <footer class="flex justify-between items-center py-16 px-20">
     <div class="text-5xl">
       <img :src="logo" alt="LOGO" />
     </div>
-    <div class="flex flex-col justify-end gap-4">
+    <div class="flex flex-col items-end gap-4">
       <div class="social-icon flex gap-2">
         <a
           href="#"

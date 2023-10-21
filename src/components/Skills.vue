@@ -8,7 +8,7 @@
         cupiditate necessitatibus quos maxime ea atque libero?
       </p>
     </div>
-    <div class="p-24">
+    <div class="p-20">
       <swiper
         :slidesPerView="1"
         :spaceBetween="0"
