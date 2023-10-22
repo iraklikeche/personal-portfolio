@@ -3,13 +3,23 @@
     class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-20 z-50"
     :class="{ 'bg-[#121212] py-2': isSticky }"
   >
-    <div class="text-5xl">
-      <img :src="logo" alt="LOGO" />
+    <div class="">
+      <img :src="logo" alt="LOGO" class="w-3/4 xl:w-full" />
     </div>
-    <div class="flex items-center">
-      <div class="flex gap-8 xl:gap-16 mr-4 xl:mr-12 text-lg">
+    <div class="lg:hidden">
+      <img :src="menu" class="w-[50px]" @click="openMenu" />
+    </div>
+    <div
+      class="flex flex-col gap-12 lg:gap-0 lg:flex-row py-12 lg:py-0 items-center absolute bg-black lg:bg-transparent w-full lg:w-auto h-auto top-0 left-[50%] translate-x-[-50%] lg:transform lg:translate-x-0 lg:static duration-1000"
+      :class="{ 'left-[-100%]': !isOpened }"
+    >
+      <div
+        class="flex items-center flex-col lg:flex-row gap-8 xl:gap-16 mr-4 xl:mr-12 text-lg"
+      >
+        <img :src="close" class="lg:hidden w-[30px]" @click="closeMenu" />
+
         <a
-          href="/"
+          href="#"
           class="opacity-50 hover:opacity-100 transition-opacity duration-200"
           >Home</a
         >
@@ -45,10 +55,21 @@ import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import menu from "../assets/img/menu.svg";
+import close from "../assets/img/close.svg";
 
 import { ref, onMounted, onUnmounted } from "vue";
 
 const isSticky = ref(false);
+const isOpened = ref(false);
+
+const openMenu = () => {
+  isOpened.value = !isOpened.value;
+};
+
+const closeMenu = () => {
+  isOpened.value = false;
+};
 
 // Function to handle scroll event
 function handleScroll() {

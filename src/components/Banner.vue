@@ -1,5 +1,5 @@
 <template>
-  <section class="banner px-20 py-10 pb-24 h-screen" id="home">
+  <section class="banner px-20 py-10 pb-24 h-screen" id="/">
     <!-- <Navbar /> -->
     <div class="flex items-center gap-24 py-28">
       <div class="w-3/4">
