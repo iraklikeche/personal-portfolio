@@ -1,7 +1,7 @@
 <template>
   <div class="img-box relative overflow-hidden">
     <img :src="imgUrl" />
-    <div class="project-text">
+    <div class="project-text text-xl">
       <h2>{{ title }}</h2>
       <span>{{ description }}</span>
     </div>
@@ -26,6 +26,25 @@ const props = defineProps({
   width: 100%;
   height: 0;
   transition: 0.4s ease-in-out;
+  border-radius: 22px;
+}
+
+@media screen and (min-width: 640px) {
+  .img-box::before {
+    border-radius: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .img-box::before {
+    border-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .img-box::before {
+    border-radius: 20px;
+  }
 }
 
 .img-box:hover::before {

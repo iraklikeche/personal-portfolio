@@ -1,14 +1,14 @@
 <template>
   <section class="contact py-24 px-20" id="connect-me">
-    <div class="grid grid-cols-2 gap-12">
-      <div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-32 lg:gap-12">
+      <div class="order-2">
         <img :src="contactImg" />
       </div>
-      <div>
+      <div class="lg:order-2">
         <h2 class="mb-12 text-5xl font-bold">Get In Touch</h2>
 
         <form ref="formData" @submit.prevent="sendEmail">
-          <div class="flex gap-2 mb-2">
+          <div class="flex gap-4 lg:gap-2 mb-4 lg:mb-2">
             <input
               type="text"
               name="user_name"
@@ -24,7 +24,7 @@
               class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
             />
           </div>
-          <div class="flex gap-2 mb-2">
+          <div class="flex gap-4 lg:gap-2 mb-4 lg:mb-2">
             <input
               type="email"
               name="user_email"

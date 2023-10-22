@@ -10,7 +10,7 @@
       </p>
       <div>
         <button
-          class="text-xl font-bold border px-20 xl:px-32 py-5 rounded-l-full bg-[#252525]"
+          class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 rounded-l-full bg-[#252525]"
           @click="changeTab(0)"
           :class="{
             'bg-gradient-to-r': activeTab === 0,
@@ -20,7 +20,7 @@
           Tab One
         </button>
         <button
-          class="text-xl font-bold border px-20 xl:px-32 py-5 bg-[#252525]"
+          class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 bg-[#252525]"
           @click="changeTab(1)"
           :class="{
             'bg-gradient-to-r': activeTab === 1,
@@ -30,14 +30,16 @@
           Tab Two
         </button>
         <button
-          class="text-xl font-bold border px-20 xl:px-32 py-5 rounded-r-full bg-[#252525]"
+          class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 rounded-r-full bg-[#252525]"
           @click="changeTab(2)"
         >
           Tab Three
         </button>
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-4 xl:gap-10 px-20 mt-12">
+    <div
+      class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-4 xl:gap-10 px-20 mt-12"
+    >
       <div
         v-if="activeTab === 0"
         v-for="(project, index) in projects"
@@ -116,21 +118,21 @@ const projects = [
     description: "Design & 4Development",
     imgUrl: projImg3,
   },
-  {
-    title: "Business Startup",
-    description: "Design5 & Development",
-    imgUrl: projImg1,
-  },
-  {
-    title: "Business Startup",
-    description: "Design8 & Development",
-    imgUrl: projImg2,
-  },
-  {
-    title: "Business Startup",
-    description: "Design & Development",
-    imgUrl: projImg3,
-  },
+  // {
+  //   title: "Business Startup",
+  //   description: "Design5 & Development",
+  //   imgUrl: projImg1,
+  // },
+  // {
+  //   title: "Business Startup",
+  //   description: "Design8 & Development",
+  //   imgUrl: projImg2,
+  // },
+  // {
+  //   title: "Business Startup",
+  //   description: "Design & Development",
+  //   imgUrl: projImg3,
+  // },
 ];
 </script>
 

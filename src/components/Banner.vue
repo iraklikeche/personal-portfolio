@@ -1,10 +1,12 @@
 <template>
-  <section class="banner px-20 py-10 pb-24 h-screen" id="/">
+  <section class="banner px-20 py-2 lg:py-10 pb-24 h-screen" id="/">
     <!-- <Navbar /> -->
-    <div class="flex items-center gap-24 py-28">
-      <div class="w-3/4">
+    <div class="flex flex-col lg:flex-row items-center gap-24 py-28">
+      <div
+        class="flex flex-col items-center justify-center gap-4 lg:block lg:w-3/4 relative z-10"
+      >
         <h2
-          class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-4 inline-block"
+          class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-8 lg:px-4 inline-block"
         >
           Welcome To My Portfolio
         </h2>
@@ -14,7 +16,9 @@
           <span class="text-red-500">{{ text }}</span>
         </h1>
 
-        <p class="text-[#b8b8b8] text-lg">
+        <p
+          class="text-white lg:text-[#b8b8b8] text-lg text-center lg:text-left"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
           temporibus possimus sequi quas quisquam vitae rem aperiam, soluta,
           praesentium et sed ipsa distinctio ab ad a officiis totam asperiores
@@ -28,8 +32,10 @@
           Let's Connect
         </a>
       </div>
-      <div>
-        <img :src="headerImg" alt="Header Image" />
+      <div
+        class="flex items-center justify-center absolute top-[7%] z-0 lg:static"
+      >
+        <img :src="headerImg" alt="Header Image" class="w-1/2 lg:w-full" />
       </div>
     </div>
   </section>

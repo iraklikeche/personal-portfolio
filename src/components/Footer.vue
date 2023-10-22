@@ -1,7 +1,9 @@
 <template>
   <footer class="flex justify-between items-center py-16 px-20">
-    <div class="text-5xl">
-      <img :src="logo" alt="LOGO" />
+    <div>
+      <a href="#">
+        <img :src="logo" alt="LOGO" class="w-1/5" />
+      </a>
     </div>
     <div class="flex flex-col items-end gap-4">
       <div class="social-icon flex gap-2">
@@ -21,7 +23,7 @@
 </template>
 
 <script setup>
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
