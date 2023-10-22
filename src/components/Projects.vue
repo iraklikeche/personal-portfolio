@@ -3,11 +3,16 @@
     <div class="flex flex-col items-center justify-center gap-8">
       <h2 class="text-5xl font-bold">Projects</h2>
       <p class="opacity-50 text-xl leading-8 font-book text-center w-3/4">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit sed,
-        sint unde nulla suscipit tempore dolorum non dolore! Commodi ut sunt,
-        animi nihil veritatis, quod incidunt totam mollitia necessitatibus quia
-        minima voluptates deleniti cumque libero fuga eum non! Molestias, quia.
+        Explore my portfolio showcasing a diverse range of front-end web
+        development projects. These projects demonstrate my expertise in
+        creating responsive, interactive, and visually appealing websites. I've
+        worked on projects ranging from personal websites to interactive web
+        applications, utilizing technologies such as HTML, CSS, JavaScript, and
+        popular front-end frameworks. Each project represents my commitment to
+        delivering exceptional user experiences and my passion for innovative
+        web development.
       </p>
+
       <div>
         <button
           class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 rounded-l-full bg-[#252525]"
@@ -17,7 +22,7 @@
             'bg-[#252525]': activeTab !== 0,
           }"
         >
-          Tab One
+          HTML/CSS/JS
         </button>
         <button
           class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 bg-[#252525]"
@@ -27,13 +32,13 @@
             'bg-[#252525]': activeTab !== 1,
           }"
         >
-          Tab Two
+          Vue.JS
         </button>
         <button
           class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 rounded-r-full bg-[#252525]"
           @click="changeTab(2)"
         >
-          Tab Three
+          APIs
         </button>
       </div>
     </div>

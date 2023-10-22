@@ -19,11 +19,13 @@
         <p
           class="text-white lg:text-[#b8b8b8] text-lg text-center lg:text-left"
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-          temporibus possimus sequi quas quisquam vitae rem aperiam, soluta,
-          praesentium et sed ipsa distinctio ab ad a officiis totam asperiores
-          tempore, praesentium et sed ipsa distinctio ab ad a officiis totam
-          asperiores.
+          Hello! I'm a dedicated Front-End Developer with a knack for crafting
+          visually appealing and intuitive user interfaces. My passion lies in
+          bringing designs to life, ensuring seamless interactions and
+          delightful user experiences, as well as turning complex ideas into
+          elegant, responsive websites. I thrive on staying up-to-date with the
+          latest web technologies and design trends. Let's collaborate and
+          create something extraordinary together!
         </p>
         <a
           href="#connect-me"
@@ -46,11 +48,11 @@ import headerImg from "../assets/img/header-img.svg";
 import { ref, onMounted } from "vue";
 import Navbar from "./Navbar.vue";
 
-const toRotate = ["Bla1.", "Blah2.", "Blah3."];
+const toRotate = ["Front-End Dev.", "UI/UX Enthusiast.", "JavaScript Geek."];
 const loopNum = ref(0);
 const isDeleting = ref(false);
 const text = ref("");
-const delta = ref(500 - Math.random() * 100);
+const delta = ref(300 - Math.random() * 100);
 const period = 2000;
 
 const tick = () => {

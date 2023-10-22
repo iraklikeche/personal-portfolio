@@ -3,9 +3,14 @@
     <div class="flex flex-col items-center justify-center py-16 pb-0">
       <h2 class="text-5xl font-bold mb-6">Skills</h2>
       <p class="opacity-50 text-xl text-center w-3/4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, magnam
-        quis error possimus eius adipisci perspiciatis maiores asperiores
-        cupiditate necessitatibus quos maxime ea atque libero?
+        As a Front-End Developer, I excel in creating dynamic and interactive
+        web applications using HTML, CSS, and JavaScript. I specialize in
+        harnessing the power of APIs to seamlessly integrate data and enhance
+        user experiences. My skills include working with popular front-end
+        libraries and frameworks such as React and Vue.js. I am adept at
+        designing intuitive user interfaces and ensuring cross-browser
+        compatibility. Let's collaborate and transform your ideas into elegant,
+        functional, and user-friendly websites.
       </p>
     </div>
     <div class="p-20">
@@ -26,18 +31,18 @@
       >
         <swiper-slide class="flex flex-col gap-6">
           <img :src="skill1" alt="" />
-          <span class="text-2xl font-bold">Skill1</span></swiper-slide
+          <span class="text-2xl font-bold">Vue.JS</span></swiper-slide
         >
         <swiper-slide class="flex flex-col gap-6">
           <img :src="skill3" alt="" />
-          <span class="text-2xl font-bold">Skill2</span></swiper-slide
+          <span class="text-2xl font-bold">Tailwind</span></swiper-slide
         ><swiper-slide class="flex flex-col gap-6">
           <img :src="skill2" alt="" />
-          <span class="text-2xl font-bold">Skill3</span></swiper-slide
+          <span class="text-2xl font-bold">React</span></swiper-slide
         >
         <swiper-slide class="flex flex-col gap-6">
           <img :src="skill1" alt="" />
-          <span class="text-2xl font-bold">Skill4</span></swiper-slide
+          <span class="text-2xl font-bold">APIs</span></swiper-slide
         >
       </swiper>
     </div>
