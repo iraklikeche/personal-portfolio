@@ -1,11 +1,15 @@
 <template>
-  <div class="img-box relative overflow-hidden">
-    <img :src="imgUrl" />
+  <a
+    :href="link"
+    target="_blank"
+    class="img-box relative h-full overflow-hidden w-full"
+  >
+    <img :src="imgUrl" class="rounded-3xl h-full w-full" />
     <div class="project-text text-xl">
       <h2>{{ title }}</h2>
       <span>{{ description }}</span>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup>
@@ -14,6 +18,7 @@ const props = defineProps({
   imgUrl: String,
   title: String,
   description: String,
+  link: String,
 });
 </script>
 
@@ -26,7 +31,6 @@ const props = defineProps({
   width: 100%;
   height: 0;
   transition: 0.4s ease-in-out;
-  border-radius: 22px;
 }
 
 @media screen and (min-width: 640px) {

@@ -22,7 +22,7 @@
             'bg-[#252525]': activeTab !== 0,
           }"
         >
-          HTML/CSS/JS
+          Vue.JS
         </button>
         <button
           class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 bg-[#252525]"
@@ -32,42 +32,70 @@
             'bg-[#252525]': activeTab !== 1,
           }"
         >
-          Vue.JS
+          APIs
         </button>
         <button
           class="text-xl font-bold border px-12 sm:px-14 md:px-20 xl:px-32 py-5 rounded-r-full bg-[#252525]"
           @click="changeTab(2)"
+          :class="{
+            'bg-gradient-to-r': activeTab === 2,
+            'bg-[#252525]': activeTab !== 2,
+          }"
         >
-          APIs
+          HTML/CSS/JS
         </button>
       </div>
     </div>
+
     <div
       class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-4 xl:gap-10 px-20 mt-12"
     >
       <div
         v-if="activeTab === 0"
-        v-for="(project, index) in projects"
+        v-for="(project, index) in vue"
         :key="index"
-        class="project"
+        class="project w-full"
+        :class="{
+          'fade-in': activeTab === 0,
+        }"
       >
         <ProjectCard
           :imgUrl="project.imgUrl"
           :title="project.title"
           :description="project.description"
+          :link="project.link"
         />
       </div>
 
       <div
         v-if="activeTab === 1"
-        v-for="(project, index) in test"
+        v-for="(project, index) in api"
         :key="index"
-        class="project"
+        class="project w-full"
+        :class="{
+          'fade-in delay-2000': activeTab === 1,
+        }"
       >
         <ProjectCard
           :imgUrl="project.imgUrl"
           :title="project.title"
           :description="project.description"
+          :link="project.link"
+        />
+      </div>
+
+      <div
+        v-if="activeTab === 2"
+        v-for="(project, index) in plain"
+        :key="index"
+        class="project w-full"
+        :class="{ 'fade-in': activeTab === 2 }"
+      >
+        <ProjectCard
+          :imgUrl="project.imgUrl"
+          :title="project.title"
+          :description="project.description"
+          :link="project.link"
         />
       </div>
     </div>
@@ -75,9 +103,18 @@
 </template>
 
 <script setup>
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import html1 from "../assets/img/html-css-js.png";
+import html2 from "../assets/img/html-css-js2.png";
+import html3 from "../assets/img/html.png";
+
+import vue1 from "../assets/img/vue.png";
+import vue2 from "../assets/img/vue2.png";
+import vue3 from "../assets/img/vue3.png";
+
+import api1 from "../assets/img/api1.png";
+import api2 from "../assets/img/api2.png";
+import api3 from "../assets/img/api3.png";
+
 import ProjectCard from "./ProjectCard.vue";
 
 import { ref } from "vue";
@@ -89,55 +126,61 @@ const changeTab = (index) => {
   console.log(index);
 };
 
-const test = [
+const api = [
   {
-    title: "Test-------------1",
-    description: "Test & 1",
-    imgUrl: projImg1,
+    title: "Weather-app",
+    description: "Find weather all over the world!",
+    link: "https://dapper-yeot-8d9032.netlify.app/",
+    imgUrl: api1,
   },
   {
-    title: "Test-----------2 ",
-    description: "Test & 2",
-    imgUrl: projImg2,
+    title: "Food-app",
+    description: "Find food with name,ingredients,letter.",
+    link: "https://calm-cocada-9d5f9a.netlify.app/",
+    imgUrl: api2,
   },
   {
-    title: "Test---------3 ",
-    description: "Test & 3",
-    imgUrl: projImg3,
+    title: "Tv-series-app",
+    description: "Rick & Morty, GOT character's information",
+    link: "https://snazzy-trifle-5727c8.netlify.app/",
+    imgUrl: api3,
   },
 ];
 
-const projects = [
+const vue = [
   {
-    title: "Business Startup",
-    description: "Design & Development1",
-    imgUrl: projImg1,
+    title: "Audiphile",
+    description: "Audio e-commerce web-app",
+    link: "https://jolly-bienenstitch-2e1af6.netlify.app/",
+    imgUrl: vue1,
   },
   {
-    title: "Business Startup",
-    description: "Design2 & Development",
-    imgUrl: projImg2,
+    title: "Planet-app",
+    description: "planet's facts web-app",
+    link: "https://merry-cocada-2572fb.netlify.app/#earth",
+    imgUrl: vue2,
   },
   {
-    title: "Business Startup",
-    description: "Design & 4Development",
-    imgUrl: projImg3,
+    title: "Movie-app",
+    description: "Movie web-app",
+    link: "https://resplendent-kitten-281e7f.netlify.app/",
+    imgUrl: vue3,
   },
-  // {
-  //   title: "Business Startup",
-  //   description: "Design5 & Development",
-  //   imgUrl: projImg1,
-  // },
-  // {
-  //   title: "Business Startup",
-  //   description: "Design8 & Development",
-  //   imgUrl: projImg2,
-  // },
-  // {
-  //   title: "Business Startup",
-  //   description: "Design & Development",
-  //   imgUrl: projImg3,
-  // },
+];
+
+const plain = [
+  {
+    title: "Food-app",
+    description: "Simple food web-app.",
+    imgUrl: html1,
+    link: "https://github.com/iraklikeche/Omnifood",
+  },
+  {
+    title: "Search engine",
+    description: "Javascript Search engine web-app.",
+    link: "https://github.com/iraklikeche/Search-engine-JavaScript-",
+    imgUrl: html2,
+  },
 ];
 </script>
 
@@ -169,5 +212,19 @@ button:hover {
     rgba(255, 20, 181, 0.6) -5.91%,
     rgba(117, 26, 174, 0.5) 111.58%
   );
+}
+
+.fade-in {
+  animation: fadeIn 2.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>

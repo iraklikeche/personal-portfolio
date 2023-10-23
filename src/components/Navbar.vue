@@ -13,7 +13,7 @@
     </div>
     <div
       class="flex flex-col gap-12 lg:gap-0 lg:flex-row py-12 lg:py-0 items-center absolute bg-black lg:bg-transparent w-full lg:w-auto h-screen lg:h-auto top-0 left-[50%] translate-x-[-50%] lg:transform lg:translate-x-0 lg:static duration-1000"
-      :class="{ 'left-[-102%]': !isOpened }"
+      :class="{ 'left-[-100%]': !isOpened }"
     >
       <div
         class="flex items-center flex-col lg:flex-row gap-8 xl:gap-16 mr-4 xl:mr-12 text-lg"
@@ -75,7 +75,6 @@
 <script setup>
 import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import github from "../assets/img/github.svg";
 import menu from "../assets/img/menu.svg";
