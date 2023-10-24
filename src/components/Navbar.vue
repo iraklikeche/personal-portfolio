@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-20 z-50"
+    class="flex items-center justify-between w-full text-white transition duration-1000 ease-in-out fixed py-5 px-4 lg:px-20 z-50"
     :class="{ 'bg-[#121212] py-0 lg:py-2': isSticky }"
   >
     <div>

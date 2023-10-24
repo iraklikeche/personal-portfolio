@@ -1,5 +1,5 @@
 <template>
-  <footer class="flex justify-between items-center py-16 px-20">
+  <footer class="flex justify-between items-center py-8 lg:py-16 px-4 lg:px-20">
     <div>
       <a href="#">
         <img :src="logo" alt="LOGO" class="w-1/5" />

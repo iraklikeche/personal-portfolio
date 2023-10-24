@@ -2,7 +2,7 @@
   <section class="rounded-xl" id="skills">
     <div class="flex flex-col items-center justify-center py-16 pb-0">
       <h2 class="text-5xl font-bold mb-6">Skills</h2>
-      <p class="opacity-50 text-xl text-center w-3/4">
+      <p class="opacity-50 text-xl text-center w-full lg:w-3/4 px-4 lg:px-0">
         As a Front-End Developer, I excel in creating dynamic and interactive
         web applications using HTML, CSS, and JavaScript. I specialize in
         harnessing the power of APIs to seamlessly integrate data and enhance
@@ -13,7 +13,7 @@
         functional, and user-friendly websites.
       </p>
     </div>
-    <div class="p-20">
+    <div class="p-4 lg:p-20 mt-8 lg:mt-0">
       <swiper
         :slidesPerView="1"
         :spaceBetween="0"

@@ -2,7 +2,9 @@
   <section class="py-12 bg-black" id="projects">
     <div class="flex flex-col items-center justify-center gap-8">
       <h2 class="text-5xl font-bold">Projects</h2>
-      <p class="opacity-50 text-xl leading-8 font-book text-center w-3/4">
+      <p
+        class="opacity-50 text-xl leading-8 font-book text-center w-full lg:w-3/4 px-4 lg:px-0"
+      >
         Explore my portfolio showcasing a diverse range of front-end web
         development projects. These projects demonstrate my expertise in
         creating responsive, interactive, and visually appealing websites. I've
@@ -42,13 +44,13 @@
             'bg-[#252525]': activeTab !== 2,
           }"
         >
-          HTML/CSS/JS
+          Plain
         </button>
       </div>
     </div>
 
     <div
-      class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-4 xl:gap-10 px-20 mt-12"
+      class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-4 xl:gap-10 px-4 lg:px-20 mt-12"
     >
       <div
         v-if="activeTab === 0"

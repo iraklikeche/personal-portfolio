@@ -1,5 +1,5 @@
 <template>
-  <section class="contact py-24 px-20" id="connect-me">
+  <section class="contact py-24 px-4 lg:px-20" id="connect-me">
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-32 lg:gap-12">
       <div class="order-2">
         <img :src="contactImg" />
@@ -8,12 +8,12 @@
         <h2 class="mb-12 text-5xl font-bold">Get In Touch</h2>
 
         <form ref="formData" @submit.prevent="sendEmail">
-          <div class="flex gap-4 lg:gap-2 mb-4 lg:mb-2">
+          <div class="lg:flex gap-4 lg:gap-2 mb-4 lg:mb-2">
             <input
               type="text"
               name="user_name"
               placeholder="First Name"
-              class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
+              class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out mb-4 lg:mb-0"
               required
             />
             <input
@@ -24,12 +24,12 @@
               class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
             />
           </div>
-          <div class="flex gap-4 lg:gap-2 mb-4 lg:mb-2">
+          <div class="lg:flex gap-4 lg:gap-2 mb-4 lg:mb-2">
             <input
               type="email"
               name="user_email"
               placeholder="Email"
-              class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out"
+              class="input rounded-3xl px-6 py-5 w-full text-lg transition duration-1000 ease-in-out mb-4 lg:mb-0"
               required
             />
             <input
@@ -48,16 +48,18 @@
             placeholder="Leave Your Message."
           />
 
-          <button
-            type="submit"
-            value="send"
-            :disabled="isSubmitting"
-            class="font-bold text-black bg-white py-4 px-12 relative transition duration-1000 ease-in-out hover:text-white"
-          >
-            <span class="z-1 relative tracking-wider">
-              {{ buttonText }}
-            </span>
-          </button>
+          <div class="flex justify-center lg:block">
+            <button
+              type="submit"
+              value="send"
+              :disabled="isSubmitting"
+              class="font-bold text-black w-full lg:w-auto bg-white py-4 px-12 relative transition duration-1000 ease-in-out hover:text-white"
+            >
+              <span class="z-1 relative tracking-wider">
+                {{ buttonText }}
+              </span>
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -1,23 +1,26 @@
 <template>
-  <section class="banner px-20 py-2 lg:py-10 pb-24 h-screen" id="/">
+  <section
+    class="banner px-4 lg:px-20 py-2 lg:py-10 pb-4 lg:pb-24 h-screen"
+    id="/"
+  >
     <!-- <Navbar /> -->
     <div class="flex flex-col lg:flex-row items-center gap-24 py-28">
       <div
         class="flex flex-col items-center justify-center gap-4 lg:block lg:w-3/4 relative z-10"
       >
         <h2
-          class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-8 lg:px-4 inline-block"
+          class="welcome text-xl font-bold text-center mb-4 tracking-wider py-2 px-8 lg:px-4 lg:inline-block hidden"
         >
           Welcome To My Portfolio
         </h2>
 
-        <h1 class="text-6xl font-bold tracking-wider mb-5 block">
+        <h1 class="text-3xl lg:text-6xl font-bold tracking-wider mb-5 block">
           Hi I'm
           <span class="text-red-500">{{ text }}</span>
         </h1>
 
         <p
-          class="text-white lg:text-[#b8b8b8] text-lg text-center lg:text-left"
+          class="text-white lg:text-[#b8b8b8] lg:text-lg text-center lg:text-left"
         >
           Hello! I'm a dedicated Front-End Developer with a knack for crafting
           visually appealing and intuitive user interfaces. My passion lies in
@@ -29,13 +32,13 @@
         </p>
         <a
           href="#connect-me"
-          class="text-white font-bold text-xl mt-10 tracking-wider inline-block hover:text-black transition duration-300"
+          class="text-white font-bold text-lg lg:text-xl mt-2 lg:mt-10 tracking-wider inline-block hover:text-black transition duration-300"
         >
           Let's Connect
         </a>
       </div>
       <div
-        class="flex items-center justify-center absolute top-[7%] z-0 lg:static"
+        class="flex items-center justify-center absolute top-[5%] z-0 lg:static"
       >
         <img :src="headerImg" alt="Header Image" class="w-1/2 lg:w-full" />
       </div>
