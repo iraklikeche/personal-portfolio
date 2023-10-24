@@ -33,7 +33,7 @@
               required
             />
             <input
-              type="tel"
+              type="number"
               placeholder="Phone Number"
               name="user_phone"
               required
@@ -51,6 +51,7 @@
           <button
             type="submit"
             value="send"
+            :disabled="isSubmitting"
             class="font-bold text-black bg-white py-4 px-12 relative transition duration-1000 ease-in-out hover:text-white"
           >
             <span class="z-1 relative tracking-wider">
@@ -65,6 +66,7 @@
 
 <script setup>
 import emailjs from "@emailjs/browser";
+
 import { ref } from "vue";
 import contactImg from "../assets/img/contact-img.svg";
 
@@ -76,24 +78,37 @@ const formData = ref({
   message: "",
 });
 
+// Prevent sending multiple emails
+const isSubmitting = ref(false);
+
+console.log(formData.value);
+
 const buttonText = ref("SEND");
 
 const sendEmail = () => {
-  emailjs
-    .sendForm(
-      "service_qnr4vjg",
-      "template_7hvu3ls",
-      formData.value, // $refs can be accessed directly in <script setup>
-      "9tBkyrPHTO01_gnU8"
-    )
-    .then(
-      (result) => {
-        console.log("SUCCESS!", result.text);
-      },
-      (error) => {
-        console.log("FAILED...", error.text);
-      }
-    );
+  isSubmitting.value = true;
+
+  // Simulate a delay of 3 seconds before sending the email
+  setTimeout(() => {
+    emailjs
+      .sendForm(
+        "service_qnr4vjg",
+        "template_7hvu3ls",
+        formData.value,
+        "9tBkyrPHTO01_gnU8"
+      )
+      .then(
+        (result) => {
+          console.log(result);
+          console.log("SUCCESS!", result.text);
+          isSubmitting.value = false;
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          isSubmitting.value = false;
+        }
+      );
+  }, 3000); // 3000 milliseconds (3 seconds) delay
 };
 </script>
 
