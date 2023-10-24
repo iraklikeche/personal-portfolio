@@ -9,11 +9,11 @@
       </a>
     </div>
     <div class="lg:hidden">
-      <img :src="menu" class="w-[50px]" @click="openMenu" />
+      <img :src="menu" class="w-[50px] cursor-pointer" @click="openMenu" />
     </div>
     <div
       class="flex flex-col gap-12 lg:gap-0 lg:flex-row py-12 lg:py-0 items-center absolute bg-black lg:bg-transparent w-full lg:w-auto h-screen lg:h-auto top-0 left-[50%] translate-x-[-50%] lg:transform lg:translate-x-0 lg:static duration-1000"
-      :class="{ 'left-[-100%]': !isOpened }"
+      :class="{ 'top-[-700%]': !isOpened }"
     >
       <div
         class="flex items-center flex-col lg:flex-row gap-8 xl:gap-16 mr-4 xl:mr-12 text-lg"
@@ -95,7 +95,6 @@ const openMenu = () => {
 const closeMenu = () => {
   isOpened.value = false;
   console.log(isOpened.value);
-  console.log("WTF");
 };
 
 // Function to handle scroll event
