@@ -104,9 +104,11 @@ const sendEmail = () => {
           console.log(result);
           console.log("SUCCESS!", result.text);
           isSubmitting.value = false;
+          alert("Mail successfully sent.");
         },
         (error) => {
           console.log("FAILED...", error.text);
+          alert("Something went wrong", error.text);
           isSubmitting.value = false;
         }
       );

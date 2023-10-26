@@ -2,7 +2,7 @@
   <footer class="flex justify-between items-center py-8 lg:py-16 px-4 lg:px-20">
     <div>
       <a href="#">
-        <img :src="logo" alt="LOGO" class="w-1/5" />
+        <img :src="logo" alt="LOGO" class="w-1/2 lg:w-1/5" />
       </a>
     </div>
     <div class="flex flex-col items-end gap-4">
