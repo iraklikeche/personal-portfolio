@@ -17,17 +17,17 @@
 
       <div>
         <button
-          class="text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-4 rounded-l-full bg-[#252525]"
+          class="text-lg sm:text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-3 rounded-l-full bg-[#252525]"
           @click="changeTab(0)"
           :class="{
             'bg-gradient-to-r': activeTab === 0,
             'bg-[#252525]': activeTab !== 0,
           }"
         >
-          Vue.JS
+          Vue
         </button>
         <button
-          class="text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-4 bg-[#252525]"
+          class="text-lg sm:text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-3 bg-[#252525]"
           @click="changeTab(1)"
           :class="{
             'bg-gradient-to-r': activeTab === 1,
@@ -37,7 +37,7 @@
           APIs
         </button>
         <button
-          class="text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-4 rounded-r-full bg-[#252525]"
+          class="text-lg sm:text-xl font-bold border px-8 sm:px-14 md:px-20 xl:px-32 py-3 rounded-r-full bg-[#252525]"
           @click="changeTab(2)"
           :class="{
             'bg-gradient-to-r': activeTab === 2,
